@@ -1,4 +1,4 @@
-    package asociatedArray;
+    package AssociativeArraysEcx;
 
     import java.io.BufferedReader;
     import java.io.IOException;
@@ -8,7 +8,7 @@
     import java.util.Map;
 
 
-    public class MainAA {
+    public class Main {
 
         public static BufferedReader reader =
                 new BufferedReader(
