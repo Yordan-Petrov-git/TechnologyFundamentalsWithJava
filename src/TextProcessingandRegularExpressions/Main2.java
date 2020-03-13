@@ -3,6 +3,7 @@
     import java.io.BufferedReader;
     import java.io.IOException;
     import java.io.InputStreamReader;
+    import java.util.Arrays;
     import java.util.LinkedList;
     import java.util.List;
     import java.util.regex.Matcher;
@@ -32,7 +33,7 @@
 
             //==============================================================
             //4.	Text Filter
-
+            //textFilter();
             //==============================================================
             //5.	Digits, Letters and Other
 
@@ -43,7 +44,7 @@
             //-----------------------------------------------------------
 
             //  6.	Match Full Name
-            natchFullName();
+            //natchFullName();
             //==============================================================
             //7.	Match Phone Number
             //matchPhoneNumber();
@@ -55,6 +56,22 @@
     //==============================================================
 
 
+        }
+
+        private static void textFilter() throws IOException {
+            String [] replaceWords =reader.readLine().split(", ");
+            String  testToBeReplace =reader.readLine();
+            for (String wordReplace : replaceWords) {
+                String res = "";
+                for (int i = 0; i <wordReplace.length() ; i++) {
+                    res+="*";
+                }
+                    if(testToBeReplace.contains(wordReplace)){
+                        testToBeReplace = testToBeReplace.replace(wordReplace,res);
+                    }
+            }
+
+            System.out.println(testToBeReplace);
         }
 
         private static void natchFullName() throws IOException {
