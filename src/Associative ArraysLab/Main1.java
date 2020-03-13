@@ -1,4 +1,4 @@
-package AssociativeArraysEcx;
+package AssociativeArraysLab;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,7 +20,6 @@ public class Main1 {
 //================================================================
         //1.	Count Real Numbers
         //countRealNumbers();
-
 //--------------------------------------------------------------------------
         //2.	Word Synonyms
         //wordSynonyms();
