@@ -43,17 +43,7 @@
             //-----------------------------------------------------------
 
             //  6.	Match Full Name
-            String input = reader.readLine();
-           final String regex = "\\b[A-Z][a-z]{1,} {1}[A-Z][a-z]{1,}\\b";
-
-            final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
-            final Matcher matcher = pattern.matcher(input);
-
-
-            while (matcher.find()){
-                System.out.print(matcher.group() + " ");
-            }
-
+            natchFullName();
             //==============================================================
             //7.	Match Phone Number
             //matchPhoneNumber();
@@ -65,6 +55,19 @@
     //==============================================================
 
 
+        }
+
+        private static void natchFullName() throws IOException {
+            String input = reader.readLine();
+            final String regex = "\\b[A-Z][a-z]{1,} {1}[A-Z][a-z]{1,}\\b";
+
+            final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
+            final Matcher matcher = pattern.matcher(input);
+
+
+            while (matcher.find()){
+                System.out.print(matcher.group() + " ");
+            }
         }
 
         private static void matchPhoneNumber() throws IOException {
