@@ -53,13 +53,25 @@ public class Main2 {
         // matchDates();
         //==============================================================
         // 9.Match Numbers
-
-
-
-
+        //matchNumbers();
         //==============================================================
 
 
+    }
+
+    private static void matchNumbers() throws IOException {
+        matchNumbers("(?<first>^|(?<=\\s))-?\\d+(\\.\\d+)?($|(?=\\s))");
+    }
+
+    private static void matchNumbers(String s) throws IOException {
+        String input = reader.readLine();
+        String regex = s;
+        final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
+        final Matcher matcher = pattern.matcher(input);
+
+        while (matcher.find()) {
+            System.out.print(matcher.group() + " ");
+        }
     }
 
     private static void charOrLetterOther() throws IOException {
