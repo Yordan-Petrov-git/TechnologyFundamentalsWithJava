@@ -3,6 +3,7 @@
     import java.io.BufferedReader;
     import java.io.IOException;
     import java.io.InputStreamReader;
+    import java.util.Map;
 
     public class Main3 {
         public static BufferedReader reader =
@@ -16,22 +17,60 @@
 
     //=======================================================
            // 1.	Valid Usernames
-            validateUsers();
+           // validateUsers();
             //=======================================================
+//2.	Character Multiplier
+//            String text = reader.readLine();
+//            String  firstWord = text.substring(0,text.indexOf(' '));
+//            String  secondWord = text.substring(text.lastIndexOf(' ')+1);
+//            System.out.println(multiplyChars(firstWord, secondWord));
             //=======================================================
+           // 3.	Extract File
             //=======================================================
+
             //=======================================================
+
             //=======================================================
+
             //=======================================================
+
             //=======================================================
+
             //=======================================================
+
             //=======================================================
+
             //=======================================================
+
             //=======================================================
+
             //=======================================================
+
+            //=======================================================
+
             //=======================================================
 
 
+
+        }
+
+        private static int multiplyChars(String first , String second){
+
+                int minLength = Math.min(first.length(),second.length());
+
+                int sum = 0;
+
+            for (int i = 0; i <minLength ; i++) {
+                sum += first.charAt(i) * second.charAt(i);
+            }
+
+
+            String maxLength = first.length() < second.length() ? second : first;
+
+            for (int i = minLength; i <maxLength.length() ; i++) {
+                sum += maxLength.charAt(i);
+            }
+            return sum;
         }
 
         private static void validateUsers() throws IOException {
